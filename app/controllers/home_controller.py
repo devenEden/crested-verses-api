@@ -17,7 +17,7 @@ def index():
     return jsonify(
         custom_response(
             status='Success',
-            data=poem.serialize,
+            data=poem.serialize if poem else {},
             message="Successfully loaded todays poems",
             status_code=200)
         )
